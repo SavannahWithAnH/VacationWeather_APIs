@@ -1,8 +1,8 @@
 # Vacation Weather
 
-**Hotel Search**  
-''' 
+**Hotel Search** 
 
+''' 
     # Print a message to follow up the hotel search
     print("Starting hotel search")
 
