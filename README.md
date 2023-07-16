@@ -100,5 +100,5 @@ Python, Pandas hvplot, API
 
 ### Questions?  
 Please refer to the following:  
-[LinkedIn](https://www.linkedin.com/in/savannah-porter-7a2627267/)  
-[Email](savannahnporter@gmail.com)  
+[My LinkedIn Page](https://www.linkedin.com/in/savannah-porter-7a2627267/)  
+[My Email Contact](savannahnporter@gmail.com)  
