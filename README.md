@@ -1,4 +1,5 @@
 # Vacation Weather
+Python, Pandas hvplot, API
 
 ## Configure the map    
     # Configure the map
@@ -20,6 +21,20 @@
 **Initial Results**  
 <img width="659" alt="image" src="https://github.com/SavannahWithAnH/VacationWeather_APIs/assets/126124356/a2b90e42-a1fe-43eb-8fa2-53d3549253c9">   
 
+## Narrow down results   
+    # Narrow down cities that fit criteria and drop any results with null values
+    filtered_weather_df = city_data_df.loc[
+    (city_data_df["Max Temp"] < 27) &
+    (city_data_df["Max Temp"] > 21) &
+    (city_data_df["Wind Speed"] < 4.5) &
+    (city_data_df["Cloudiness"] == 0)
+    ]
+
+    # Drop any rows with null values
+    filtered_weather_df = filtered_weather_df.dropna()
+
+    # Display sample data
+    filtered_weather_df  
 
 **Hotel Search**      
     # Print a message to follow up the hotel search
@@ -61,4 +76,21 @@
 **Results**  
 <img width="553" alt="image" src="https://github.com/SavannahWithAnH/VacationWeather_APIs/assets/126124356/1f9a0028-d861-4bd3-bdf8-4cdd593b4063">  
 
+## Update map to reflect a review of the collected information
+    # Configure the map
+    map_plot_2 = city_data_df.hvplot.points(
+    "Lng",
+    "Lat",
+    geo = True,
+    tiles = "OSM",
+    color = "City",
+    scale = 1,
+    alpha = 0.5,
+    frame_width = 700,
+    frame_height = 500,
+    hover_cols = ["Hotel Name", "Country"],
+    size = "Humidity"    
+    )
 
+    # Display the map plot
+    map_plot_2
