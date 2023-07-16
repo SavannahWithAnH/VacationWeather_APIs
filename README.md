@@ -2,10 +2,10 @@
 
 **Hotel Search**  
 '''
-# Print a message to follow up the hotel search
+     # Print a message to follow up the hotel search
 print("Starting hotel search")
 
-# Iterate through the hotel_df DataFrame
+    # Iterate through the hotel_df DataFrame
 for index, row in hotel_df.iterrows():
     lat = row["Lat"]
     lon = row["Lng"]
@@ -34,7 +34,7 @@ for index, row in hotel_df.iterrows():
     # Log the search results
     print(f"{hotel_df.loc[index, 'City']} - nearest hotel: {hotel_df.loc[index, 'Hotel Name']}")
 
-# Display sample data
+    # Display sample data
 hotel_df '''
  **Results**  
  <img width="392" alt="image" src="https://github.com/SavannahWithAnH/VacationWeather_APIs/assets/126124356/7441c611-a2b2-4374-ad8a-0c9af2743a32">
