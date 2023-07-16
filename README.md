@@ -1,5 +1,27 @@
 # Vacation Weather
 
+## Configure the map  
+
+    # Configure the map
+    map_plot_1 = city_data_df.hvplot.points(
+    "Lng",
+    "Lat",
+    geo = True,
+    tiles = "OSM",
+    color = "City",
+    scale = 1,
+    alpha = 0.5,
+    frame_width = 700,
+    frame_height = 500    
+    )
+
+    # Display the map plot
+    map_plot_1
+
+**Initial Results**  
+<img width="659" alt="image" src="https://github.com/SavannahWithAnH/VacationWeather_APIs/assets/126124356/a2b90e42-a1fe-43eb-8fa2-53d3549253c9">   
+
+
 **Hotel Search** 
     
     # Print a message to follow up the hotel search
