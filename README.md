@@ -1,7 +1,44 @@
 # Vacation Weather
 
 **Hotel Search**  
-<img width="746" alt="image" src="https://github.com/SavannahWithAnH/VacationWeather_APIs/assets/126124356/760de0a8-9cf2-4fee-88ff-1849eb0c8ffd">  
+'''
+# Print a message to follow up the hotel search
+print("Starting hotel search")
+
+# Iterate through the hotel_df DataFrame
+for index, row in hotel_df.iterrows():
+    lat = row["Lat"]
+    lon = row["Lng"]
+    
+    # Add filter and bias parameters with the current city's latitude and longitude to the params dictionary
+    params["filter"] = f"circle:{lon},{lat},{radius}"
+    params["bias"] = f"proximity:{lon},{lat}"
+    
+    # Set base URL
+    base_url = "https://api.geoapify.com/v2/places"
+
+
+    # Make and API request using the params dictionary
+    name_address = requests.get(base_url, params=params)
+    
+    # Convert the API response to JSON format
+    name_address = name_address.json()  
+    
+    # Grab the first hotel from the results and store the name in the hotel_df DataFrame
+    try:
+        hotel_df.loc[index, "Hotel Name"] = name_address["features"][0]["properties"]["name"]
+    except (KeyError, IndexError):
+        # If no hotel is found, set the hotel name as "No hotel found".
+        hotel_df.loc[index, "Hotel Name"] = "No hotel found"
+        
+    # Log the search results
+    print(f"{hotel_df.loc[index, 'City']} - nearest hotel: {hotel_df.loc[index, 'Hotel Name']}")
+
+# Display sample data
+hotel_df '''
+ **Results**  
+ <img width="392" alt="image" src="https://github.com/SavannahWithAnH/VacationWeather_APIs/assets/126124356/7441c611-a2b2-4374-ad8a-0c9af2743a32">
+
 
 
 Part 1: WeatherPy
