@@ -1,8 +1,8 @@
 # Vacation Weather
 
 **Hotel Search**  
-'''
-     # Print a message to follow up the hotel search
+'''    
+    # Print a message to follow up the hotel search
     print("Starting hotel search")
 
     # Iterate through the hotel_df DataFrame
