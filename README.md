@@ -96,3 +96,9 @@ Python, Pandas hvplot, API
 
     # Display the map plot
     map_plot_2
+
+
+### Questions?  
+Please refer to the following:  
+[LinkedIn](https://www.linkedin.com/in/savannah-porter-7a2627267/)  
+[Email](savannahnporter@gmail.com)  
