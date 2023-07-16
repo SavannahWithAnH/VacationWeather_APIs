@@ -75,6 +75,7 @@ Python, Pandas hvplot, API
 
 
 **Results**  
+  
 <img width="553" alt="image" src="https://github.com/SavannahWithAnH/VacationWeather_APIs/assets/126124356/1f9a0028-d861-4bd3-bdf8-4cdd593b4063">  
 
 ## Update map to reflect a review of the collected information
